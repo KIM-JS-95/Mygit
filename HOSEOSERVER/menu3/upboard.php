@@ -49,7 +49,8 @@
                 <td colspan="2">
                     <input type="submit" value="등록" onclick="sendData()" class="pull-right"/>
                     <input type="button" value="reset" class="pull-left"/>
-                    <input type="button" value="글 목록으로... " class="pull-right" onclick="location.href='index.php'"/>
+                    <input type="button" value="글 목록으로... " class="pull-right" onclick="location.href='./Content.php'"/>
+                  
                 </td>
             </tr>
            

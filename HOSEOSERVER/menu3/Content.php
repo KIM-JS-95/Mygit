@@ -1,3 +1,30 @@
+<style>
+        table{
+                border-top: 1px solid #444444;
+                border-collapse: collapse;
+        }
+        tr{
+                border-bottom: 1px solid #444444;
+                padding: 10px;
+        }
+        td{
+                border-bottom: 1px solid #efefef;
+                padding: 10px;
+        }
+        table .even{
+                background: #efefef;
+        }
+        .text{
+                text-align:center;
+                padding-top:20px;
+                color:#000000
+        }
+        .text:hover{
+                text-decoration: underline;
+        }
+        a:link {color : #57A0EE; text-decoration:none;}
+        a:hover { text-decoration : underline;}
+</style>
 
 <?php
 $con = mysqli_connect('localhost', 'root', 'Wotjd@487', 'sqldb') or die ('�뜲�씠�꽣踰좎씠�뒪 �뿰寃곗뿉 臾몄젣媛� �엳�뒿�땲�떎.\n愿�由ъ옄�뿉寃� 臾몄쓽 諛붾엻�땲�떎.');
@@ -50,7 +77,7 @@ if(mysqli_connect_error($con)){
                         <?php } ?>
                 <td width = "50" align = "center"><?php echo $total?></td>
                 <td width = "500" align = "center">
-                <a href = "view.php?number=<?php echo $rows['NUM']?>">
+                <a href = "view.php?NUM=<?php echo $rows['NUM']?>">
                 <?php echo $rows['TITLE']?></td>
                   <td width = "100" align = "center"><?php echo $rows['NAME']?></td>
                 <td width = "200" align = "center"><?php echo $rows['DT']?></td>
@@ -59,6 +86,7 @@ if(mysqli_connect_error($con)){
         <?php
                 $total++;
                 }
+                mysqli_close($con);
         ?>
 
 
@@ -70,24 +98,3 @@ if(mysqli_connect_error($con)){
 	</article>
 </body>
 </html>
-<!--
-					<?php
-					echo "<h1> board </h1>";
-					echo "<table border=1>";
-					echo "<tr>";
-                    echo "<th>글 번호</th><th>글 유형</th><th>이름</th><th>내용</th><th>시간</th>";
-                    echo "</tr>";
-                    
-                    while($row = mysqli_fetch_array($ret)) {
-                        echo "<tr>";
-                        echo "<td>",$row['NUM'],"</td>";
-                        echo "<td>",$row['TYPE'],"</td>";
-                        echo "<td>",$row['NAME'],"</td>";
-                        echo "<td>",$row['CONTENTS'], "</td>";
-                        echo "<td>", $row['DT'],"</td>";
-                        echo "</tr>";
-                    
-                    }
-                    mysqli_close($con);
-					?>
-					 -->
