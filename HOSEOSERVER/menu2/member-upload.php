@@ -55,7 +55,6 @@
 			
         	</tr>
             <tr>
-            
                 <td colspan="2">
                     <input type="submit" value="등록" onclick="sendData()" class="pull-right"/>
                     <input type="button" value="reset" class="pull-left"/>

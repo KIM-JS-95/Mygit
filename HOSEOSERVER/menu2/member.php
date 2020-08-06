@@ -44,7 +44,7 @@ if(mysqli_connect_error($con)){
                     
                     while($row = mysqli_fetch_array($ret)) {
                         echo "<tr>";
-                        echo "<td>","<img src='C:\SQL\Movies\[$i].jpg'>","</td>";
+                        echo "<td>","<img src='.\Movies\[$i].jpg'>","</td>";
                         echo "<td>",$row['NAME'],"</td>";
                         echo "<td>",$row['GRADE'], "</td>";
                         echo "<td>",$row['PHONENUM'], "</td>";

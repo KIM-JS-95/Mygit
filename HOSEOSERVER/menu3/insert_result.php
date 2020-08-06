@@ -1,4 +1,4 @@
-<?php
+<?
 $con = mysqli_connect("localhost", "root", 'Wotjd@487', "sqldb") or die ('DB연결 실패했습니다.');
 $NUM=0;
 $NAME=$_POST["NAME"];
