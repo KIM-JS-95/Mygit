@@ -27,7 +27,7 @@
 </style>
 
 <?php
-$con = mysqli_connect('localhost', 'root', 'Wotjd@487', 'sqldb') or die ('�뜲�씠�꽣踰좎씠�뒪 �뿰寃곗뿉 臾몄젣媛� �엳�뒿�땲�떎.\n愿�由ъ옄�뿉寃� 臾몄쓽 諛붾엻�땲�떎.');
+$con = mysqli_connect('localhost', 'root', 'Wotjd@487', 'sqldb') or die ('占쎈쑓占쎌뵠占쎄숲甕곗쥙�뵠占쎈뮞 占쎈염野껉퀣肉� �눧紐꾩젫揶쏉옙 占쎌뿳占쎈뮸占쎈빍占쎈뼄.\n�꽴占썹뵳�딆쁽占쎈퓠野껓옙 �눧紐꾩벥 獄쏅뗀�뿻占쎈빍占쎈뼄.');
 $sql = "select * from boardtable";
 
 
@@ -35,7 +35,7 @@ $ret = mysqli_query($con,$sql);
 $total = 1;
 
 if(mysqli_connect_error($con)){
-    echo "에러 발생 : ",mysqli_connect_error();
+    echo "�뿉�윭 諛쒖깮 : ",mysqli_connect_error();
     exit();
 }
 ?>
@@ -44,7 +44,7 @@ if(mysqli_connect_error($con)){
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>게시판</title>
+	<title>寃뚯떆�뙋</title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -53,22 +53,21 @@ if(mysqli_connect_error($con)){
 
 <body>
 	<article class="boardArticle">
-		<h3>자동차 ICT 공학과</h3>
+		<h3>�옄�룞李� ICT 怨듯븰怨�</h3>
 		
 		<table>
 			<caption class="readHide"></caption>
 			<thead>
 			</thead>
 			<tbody>
-			
-					
+		
 					 <?php
 					 echo "<h1> board </h1>";
 					 echo "<table border=1>";
 					 echo "<tr>";
-					 echo "<th>글 번호</th><th>제목</th><th>이름</th><th>시간</th><th>유형</th>";
+					 echo "<th>湲� 踰덊샇</th><th>�젣紐�</th><th>�씠由�</th><th>�떆媛�</th><th>�쑀�삎</th>";
 					 echo "</tr>";
-                while($rows = mysqli_fetch_assoc($ret)){ //DB에 저장된 데이터 수 (열 기준)
+                while($rows = mysqli_fetch_assoc($ret)){ //DB�뿉 ���옣�맂 �뜲�씠�꽣 �닔 (�뿴 湲곗�)
                         if($total%2==0){
         ?>                      <tr class = "even">
                         <?php   }
@@ -88,10 +87,8 @@ if(mysqli_connect_error($con)){
                 }
                 mysqli_close($con);
         ?>
-
-
 					<tr>
-					<input type="button" value="글 작성 " class="pull-right" onclick="location.href='upboard.php'"/>
+					<input type="button" value="湲� �옉�꽦 " class="pull-right" onclick="location.href='upboard.php'"/>
 					</tr>
 			</tbody>
 		</table>

@@ -17,14 +17,14 @@
 <div class="container">
 <table class="table table-bordered">
     <thead>
-        <caption> 글쓰기장 </caption>
+        <caption> 글 작성 </caption>
     <tbody>
         <form action="insert_result.php" method="post" encType="multiplart/form-data">
             
             
              <tr>
-                <th>닉네임: </th>
-                <td><input type="text" placeholder="닉네임. " name="NAME" class="form-control"/></td>
+                <th>작성자: </th>
+                <td><input type="text" placeholder="작성자를 입력하세요. " name="NAME" class="form-control"/></td>
             </tr>
             
             <tr>
@@ -32,8 +32,8 @@
                 <td><input type="text" placeholder="제목을 입력하세요. " name="TITLE" class="form-control"/></td>
             </tr>
             <tr>
-                <th>내용: </th>
-                <td><textarea cols="10"  placeholder="내용을 입력하세요. " name="CONTENT" class="form-control"></textarea></td>
+                <th>글 내용: </th>
+                <td><textarea cols="10"  placeholder="글 내용을 입력하세요. " name="CONTENT" class="form-control"></textarea></td>
             </tr>
             
              <tr>
@@ -49,7 +49,7 @@
                 <td colspan="2">
                     <input type="submit" value="등록" onclick="sendData()" class="pull-right"/>
                     <input type="button" value="reset" class="pull-left"/>
-                    <input type="button" value="글 목록으로... " class="pull-right" onclick="location.href='./Content.php'"/>
+                    <input type="button" value="글 목록으로 " class="pull-right" onclick="href='../offcanvas/board.php'"/>
                   
                 </td>
             </tr>
